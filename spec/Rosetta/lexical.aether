@@ -1,0 +1,29 @@
+# Rosetta, general purpose text and binary files mapping tool
+# Copyright (C) 2026  The Ignea Project
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+Comma: , ;
+
+Newline: \r? \n ;
+
+FileMode@index: [bt] ;
+
+FilePath@index: ([^\n\r,\\] | \\ [,\\nr])+ ;
+
+FileHash@index: [0-9a-f]{64} ;
+
+ZeroBasedInteger@mapping: 0 | [1-9] [0-9]* ;
+
+OneBasedInteger@mapping: [1-9] [0-9]* ;
